@@ -11,6 +11,7 @@ create_helper() {
   helper=$1
   snake_case=$(echo $helper | sed -r 's/([a-z0-9])([A-Z])/\1-\L\2/g')
   helper_name="voca-$snake_case"
+  caps=$(echo $helper_name | awk -F - '{printf "%s", $1; for(i=2; i<=NF; i++) printf "%s", toupper(substr($i,1,1)) substr($i,2); print"";}')
   echo 'installing helper'
 
   # Creating addon
@@ -22,7 +23,7 @@ create_helper() {
   echo "import { helper } from '@ember/component/helper';
 import { $helper } from 'voca';
 
-export default helper(function voca$helper(params/*, hash */ ) {
+export default helper(function $caps(params/*, hash */ ) {
   return $helper(params[0]);
 });" > $helper_addon
 
@@ -59,7 +60,7 @@ module('Integration | Helper | $helper_name', function(hooks) {
 
 
   # Writing app helper content
-  echo "export { default, $caps } from 'ember-chance/helpers/$helper_name';" > $app_helper
+  echo "export { default, $caps } from 'ember-voca/helpers/$helper_name';" > $app_helper
 
   # Write examples to application.hbs
   echo "
@@ -67,16 +68,14 @@ module('Integration | Helper | $helper_name', function(hooks) {
   <p>Description for $helper_name goes here.</p>
   <p>
   <code>
-  \{{ $helper_name }}
+  \{{ $helper_name \"hello world\"}}
   </code>
   </p>
-  <p>With named arguments (options) :</p>
   <p>
   <code>
-  \{{ $helper_name }}
+  // => {{ $helper_name \"hello world\"}}
   </code>
-  </p>
-  " >> tests/dummy/app/templates/application.hbs
+  </p>" >> tests/dummy/app/templates/application.hbs
 }
 
 

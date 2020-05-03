@@ -1,4 +1,3 @@
-camelCase
 capitalize
 decapitalize
 kebabCase
@@ -68,4 +67,3 @@ words
 stripBom
 stripTags
 noConflict
-version
