@@ -32,6 +32,11 @@ Usage
 {{voca-camel-case "hello world"}}
 \\ => helloWorld
 ```
+
+```hbs
+{{ voca-decapitalize "Hello World"}}
+\\ => hello world
+```
 Contributing
 ------------------------------------------------------------------------------
 
