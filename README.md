@@ -28,6 +28,10 @@ Usage
 \\ => Hello World
 ```
 
+```hbs
+{{voca-camel-case "hello world"}}
+\\ => helloWorld
+```
 Contributing
 ------------------------------------------------------------------------------
 
