@@ -1,13 +1,16 @@
 {
   "name": "ember-voca",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    |"helpers",
+    "voca",
+    "string helpers"
   ],
-  "repository": "",
+  "repository": "https://github.com/rajasegar/ember-voca",
   "license": "MIT",
-  "author": "",
+  "author": "Rajasegar Chandran <rajasegar.c@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -20,7 +23,8 @@
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test",
-    "test:ember-compatibility": "ember try:each"
+    "test:ember-compatibility": "ember try:each",
+    "deploy": "npm version patch && git push && git push --tags && npm publish"
   },
   "dependencies": {
     "ember-cli-babel": "^7.18.0",
