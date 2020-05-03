@@ -4,7 +4,7 @@
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon",
-    |"helpers",
+    "helpers",
     "voca",
     "string helpers"
   ],
