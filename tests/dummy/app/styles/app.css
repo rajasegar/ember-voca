@@ -1,15 +1,10 @@
 body {
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background: #f6fafd;
   color: #333;
 }
 
-code {
-  padding: 1em;
-  background: #ddd;
-  margin:.5em;
-  border-radius:.25em;
-}
+
 
 #container {
   display: grid;
@@ -18,12 +13,21 @@ code {
 
 #sidebar {
 padding: 1em;
+overflow: auto;
+max-height: 100vh;
 }
 
 #main {
 padding: 1em;
+border-radius: 0.3em;
+box-shadow: 0 0 0.5em #d5d7d8;
+background: #fff;
 }
 
 .logo {
 max-width: 900px;
+}
+
+nav ul li {
+list-style: none;
 }
