@@ -1,13 +1,36 @@
 
   <h3>voca-snake-case:</h3>
-  <p>Description for voca-snake-case goes here.</p>
+  <p>Converts the argument to snake-case</p>
+
   <p>
   <code>
-  \{{ voca-snake-case "hello world"}}
+  \{{ voca-snake-case "learning to fly"}}
   </code>
   </p>
   <p>
   <code>
-  // => {{ voca-snake-case "hello world"}}
+  // => {{ voca-snake-case "learning to fly"}}
+  </code>
+  </p>
+
+
+  <p>
+  <code>
+  \{{ voca-snake-case "LearningToFly"}}
+  </code>
+  </p>
+  <p>
+  <code>
+  // => {{ voca-snake-case "LearningToFly"}}
+  </code>
+  </p>
+  <p>
+  <code>
+  \{{ voca-snake-case "-Learning-To-Fly"}}
+  </code>
+  </p>
+  <p>
+  <code>
+  // => {{ voca-snake-case "-Learning-To-Fly"}}
   </code>
   </p>
