@@ -1,13 +1,24 @@
 
   <h3>voca-title-case:</h3>
-  <p>Description for voca-title-case goes here.</p>
+  <p>Converts the argument to title case</p>
+  <p>The second argument is an array which tells not to split the words at the specified characters. [optional]</p>
   <p>
   <code>
-  \{{ voca-title-case "hello world"}}
+  \{{ voca-title-case "learning to fly"}}
   </code>
   </p>
   <p>
   <code>
-  // => {{ voca-title-case "hello world"}}
+    // => {{ voca-title-case "learning to fly"}}
+  </code>
+  </p>
+  <p>
+  <code>
+  \{{ voca-title-case "jean-luc is good-looking" (array "-")}}
+  </code>
+  </p>
+  <p>
+  <code>
+    // => {{ voca-title-case "jean-luc is good-looking" (array "-")}}
   </code>
   </p>

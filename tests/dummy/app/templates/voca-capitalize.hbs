@@ -1,16 +1,30 @@
 
   <h3>voca-capitalize:</h3>
-  <p>Converts the first character of the argument to upper case.</p>
+  <p>Converts the first character of the argument to upper case. If the second argument is true, convert the rest of subject to lower case.</p>
   <p>
 <pre class="language-handlebars">
   <code class="language-handlebars">
-  \{{ voca-capitalize "hello world"}}
+  \{{ voca-capitalize "apple"}}
   </code>
 </pre>
 
   </p>
   <p>
   <code>
-  // => {{ voca-capitalize "hello world"}}
+  // => {{ voca-capitalize "apple"}}
+  </code>
+  </p>
+
+  <p>
+<pre class="language-handlebars">
+  <code class="language-handlebars">
+  \{{ voca-capitalize "aPPle" true}}
+  </code>
+</pre>
+
+  </p>
+  <p>
+  <code>
+  // => {{ voca-capitalize "aPPle" true}}
   </code>
   </p>

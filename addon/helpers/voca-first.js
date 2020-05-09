@@ -1,6 +1,6 @@
-import { helper } from '@ember/component/helper';
-import { first } from 'voca';
+import { helper } from "@ember/component/helper";
+import { first } from "voca";
 
-export default helper(function vocaFirst(params/*, hash */ ) {
-  return first(params[0]);
+export default helper(function vocaFirst(params /*, hash */) {
+  return first(params[0], params[1]);
 });
