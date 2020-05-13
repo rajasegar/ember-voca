@@ -10,6 +10,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@6.8.0
   broccoli-asset-rev: 3.0.0
   ember-cli: 3.17.0
+  ember-cli-code-coverage: github.com/kategengler/ember-cli-code-coverage/3fc251f937bc2a9ceb4d830be4455110100f4969
   ember-cli-dependency-checker: 3.2.0
   ember-cli-inject-live-reload: 2.0.2
   ember-cli-sri: 2.1.1
@@ -882,6 +883,18 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-Ra3JXOHBq2xd56xSF7lMKXdjBn3T772Y1Wet3yWnkDly9zHvJki029tAFzvAAK5cf4YV3yoxuP61crYRol6SVg==
+  /@babel/register/7.9.0:
+    dependencies:
+      find-cache-dir: 2.1.0
+      lodash: 4.17.15
+      make-dir: 2.1.0
+      pirates: 4.0.1
+      source-map-support: 0.5.19
+    dev: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-Tv8Zyi2J2VRR8g7pC5gTeIN8Ihultbmk0ocyNz8H2nEZbmhp1N6q0A1UGsQbDvGP/sNinQKUHf3SqXwqjtFv4Q==
   /@babel/runtime/7.9.6:
     dependencies:
       regenerator-runtime: 0.13.5
@@ -1519,6 +1532,14 @@ packages:
       normalize-path: 2.1.1
     resolution:
       integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==
+  /append-transform/1.0.0:
+    dependencies:
+      default-require-extensions: 2.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-P009oYkeHyU742iSZJzZZywj4QRJdnTWffaKuJQLablCZ1uz6/cW4yaRgcDaoQ+uwOxxnt0gRUcwfsNP2ri0gw==
   /aproba/1.2.0:
     resolution:
       integrity: sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw==
@@ -1924,6 +1945,17 @@ packages:
       node: 8.* || 10.* || >= 12.*
     resolution:
       integrity: sha512-ZiFY0nQjtdMPGIDwp/5LYOs6rCr54QfcSV5nPbrA7C++Fv4Vb2Q/qrKYx78t+dwmARJztnOBlObFk4z8veHxNA==
+  /babel-plugin-istanbul/5.2.0:
+    dependencies:
+      '@babel/helper-plugin-utils': 7.8.3
+      find-up: 3.0.0
+      istanbul-lib-instrument: 3.3.0
+      test-exclude: 5.2.3
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-5LphC0USA8t4i1zCtjbbNb6jJj/9+X6P37Qfirc/70EQ34xKlMW+a1RHGwxGI+SwWpNwZ27HqvzAobeqaXwiZw==
   /babel-plugin-module-resolver/3.2.0:
     dependencies:
       find-babel-config: 1.2.0
@@ -3357,6 +3389,13 @@ packages:
       node: '>=0.8'
     resolution:
       integrity: sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+  /co/4.6.0:
+    dev: true
+    engines:
+      iojs: '>= 1.0.0'
+      node: '>= 0.12.0'
+    resolution:
+      integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=
   /code-point-at/1.1.0:
     dev: true
     engines:
@@ -3444,9 +3483,12 @@ packages:
     resolution:
       integrity: sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
   /commondir/1.0.1:
-    dev: false
     resolution:
       integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
+  /compare-versions/3.6.0:
+    dev: true
+    resolution:
+      integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==
   /component-bind/1.0.0:
     dev: true
     resolution:
@@ -3803,6 +3845,14 @@ packages:
   /deep-is/0.1.3:
     resolution:
       integrity: sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
+  /default-require-extensions/2.0.0:
+    dependencies:
+      strip-bom: 3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-9fj7sYp9bVCyH2QfZJ67Uiz+JPc=
   /defaults/1.0.3:
     dependencies:
       clone: 1.0.4
@@ -5200,6 +5250,13 @@ packages:
     optional: true
     resolution:
       integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
+  /fileset/2.0.3:
+    dependencies:
+      glob: 7.1.6
+      minimatch: 3.0.4
+    dev: true
+    resolution:
+      integrity: sha1-jnVIqW08wjJ+5eZ0FocjozO7oqA=
   /filesize/4.2.1:
     engines:
       node: '>= 0.4.0'
@@ -5250,7 +5307,6 @@ packages:
       commondir: 1.0.1
       make-dir: 2.1.0
       pkg-dir: 3.0.0
-    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -6008,6 +6064,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-71lZziiDnsuabfdYiUeWdCVyKuqwWi23L8YeIgV9jSSZHCtb6wB1BKWooH7L3tn4/FuZJMVWyNaIDr4RGmaSYw==
+  /html-escaper/2.0.2:
+    dev: true
+    resolution:
+      integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
   /http-cache-semantics/3.8.1:
     dev: true
     resolution:
@@ -6507,6 +6567,84 @@ packages:
     dev: false
     resolution:
       integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
+  /istanbul-api/2.1.7:
+    dependencies:
+      async: 2.6.3
+      compare-versions: 3.6.0
+      fileset: 2.0.3
+      istanbul-lib-coverage: 2.0.5
+      istanbul-lib-hook: 2.0.7
+      istanbul-lib-instrument: 3.3.0
+      istanbul-lib-report: 2.0.8
+      istanbul-lib-source-maps: 3.0.6
+      istanbul-reports: 2.2.7
+      js-yaml: 3.13.1
+      make-dir: 2.1.0
+      minimatch: 3.0.4
+      once: 1.4.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-LYTOa2UrYFyJ/aSczZi/6lBykVMjCCvUmT64gOe+jPZFy4w6FYfPGqFT2IiQ2BxVHHDOvCD7qrIXb0EOh4uGWw==
+  /istanbul-lib-coverage/2.0.5:
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-8aXznuEPCJvGnMSRft4udDRDtb1V3pkQkMMI5LI+6HuQz5oQ4J2UFn1H82raA3qJtyOLkkwVqICBQkjnGtn5mA==
+  /istanbul-lib-hook/2.0.7:
+    dependencies:
+      append-transform: 1.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-vrRztU9VRRFDyC+aklfLoeXyNdTfga2EI3udDGn4cZ6fpSXpHLV9X6CHvfoMCPtggg8zvDDmC4b9xfu0z6/llA==
+  /istanbul-lib-instrument/3.3.0:
+    dependencies:
+      '@babel/generator': 7.9.6
+      '@babel/parser': 7.9.6
+      '@babel/template': 7.8.6
+      '@babel/traverse': 7.9.6
+      '@babel/types': 7.9.6
+      istanbul-lib-coverage: 2.0.5
+      semver: 6.3.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-5nnIN4vo5xQZHdXno/YDXJ0G+I3dAm4XgzfSVTPLQpj/zAV2dV6Juy0yaf10/zrJOJeHoN3fraFe+XRq2bFVZA==
+  /istanbul-lib-report/2.0.8:
+    dependencies:
+      istanbul-lib-coverage: 2.0.5
+      make-dir: 2.1.0
+      supports-color: 6.1.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-fHBeG573EIihhAblwgxrSenp0Dby6tJMFR/HvlerBsrCTD5bkUuoNtn3gVh29ZCS824cGGBPn7Sg7cNk+2xUsQ==
+  /istanbul-lib-source-maps/3.0.6:
+    dependencies:
+      debug: 4.1.1
+      istanbul-lib-coverage: 2.0.5
+      make-dir: 2.1.0
+      rimraf: 2.7.1
+      source-map: 0.6.1
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-R47KzMtDJH6X4/YW9XTx+jrLnZnscW4VpNN+1PViSYTejLVPWv7oov+Duf8YQSPyVRUvueQqz1TcsC6mooZTXw==
+  /istanbul-reports/2.2.7:
+    dependencies:
+      html-escaper: 2.0.2
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-uu1F/L1o5Y6LzPVSVZXNOoD/KXpJue9aeLRd0sM9uMXfZvzomB0WxVamWb5ue8kA2vVWEmW7EG+A5n3f1kqHKg==
   /istextorbinary/2.1.0:
     dependencies:
       binaryextensions: 2.2.0
@@ -6868,6 +7006,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
+  /lodash.concat/4.5.0:
+    dev: true
+    resolution:
+      integrity: sha1-sFOuAuSoAIWC5yVrnQK9ptA4A5U=
   /lodash.debounce/3.1.1:
     dependencies:
       lodash._getnative: 3.9.1
@@ -6995,7 +7137,6 @@ packages:
     dependencies:
       pify: 4.0.1
       semver: 5.7.1
-    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -7386,6 +7527,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ehY/mVQCf9BL0gKfsJBvFJen+1V//U+0HQMPrWct40ixE4jnv0bfvxDbWtAHL9EcaPEOJHVVYKoQn1TlZUB8Tw==
+  /node-dir/0.1.17:
+    dependencies:
+      minimatch: 3.0.4
+    dev: true
+    engines:
+      node: '>= 0.10.5'
+    resolution:
+      integrity: sha1-X1Zl2TNRM1yqvvjxxVRRbPXx5OU=
   /node-int64/0.4.0:
     dev: true
     resolution:
@@ -7422,6 +7571,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6Gbjq+d7uhkO7epaKi5DNgUJn7H0gEyA4Jg0Mo1uQOi3Rk50G83LtmhhFyw0LxnAFhtlspkiiw52ISP13qzcBg==
+  /node-modules-regexp/1.0.0:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA=
   /node-notifier/5.4.3:
     dependencies:
       growly: 1.3.0
@@ -7983,7 +8138,6 @@ packages:
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
   /pify/4.0.1:
-    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -8002,10 +8156,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
+  /pirates/4.0.1:
+    dependencies:
+      node-modules-regexp: 1.0.0
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-WuNqLTbMI3tmfef2TKxlQmAiLHKtFhlsCZnPIpuv2Ow0RDVO8lfy1Opf4NUzlMXLjPl+Men7AuVdX6TA+s+uGA==
   /pkg-dir/3.0.0:
     dependencies:
       find-up: 3.0.0
-    dev: false
     engines:
       node: '>=6'
     resolution:
@@ -8294,6 +8455,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /read-pkg-up/4.0.0:
+    dependencies:
+      find-up: 3.0.0
+      read-pkg: 3.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-6etQSH7nJGsK0RbG/2TeDzZFa8shjQ1um+SwQQ5cwKy0dhSXdOncEhb1CPpvQG4h7FyOV6EB6YlV0yJvZQNAkA==
   /read-pkg/3.0.0:
     dependencies:
       load-json-file: 4.0.0
@@ -9443,6 +9613,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
+  /supports-color/6.1.0:
+    dependencies:
+      has-flag: 3.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-qe1jfm1Mg7Nq/NSh6XE24gPXROEVsWHxC1LIx//XNlD9iw7YZQGjZNjYN7xGaEG6iKdA8EtNFW6R0gjnVXp+wQ==
   /supports-color/7.1.0:
     dependencies:
       has-flag: 4.0.0
@@ -9530,6 +9708,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-wMvqukYgVpQlymbnNbabVZbtM6PN63AzqexpwJL8tbh/mRT9LE5o+ruVduAGL7D6Fpjl+Q+06U5I9Ul82odAhw==
+  /test-exclude/5.2.3:
+    dependencies:
+      glob: 7.1.6
+      minimatch: 3.0.4
+      read-pkg-up: 4.0.0
+      require-main-filename: 2.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-M+oxtseCFO3EDtAaGH7iiej3CBkzXqFMbzqYAACdzKui4eZA+pq3tZEwChvOdNfa7xxy8BfbmgJSIr43cC/+2g==
   /testem/3.1.0:
     dependencies:
       backbone: 1.4.0
@@ -10387,6 +10576,29 @@ packages:
     dev: true
     resolution:
       integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=
+  github.com/kategengler/ember-cli-code-coverage/3fc251f937bc2a9ceb4d830be4455110100f4969:
+    dependencies:
+      '@babel/register': 7.9.0
+      babel-plugin-istanbul: 5.2.0
+      babel-plugin-transform-async-to-generator: 6.24.1
+      body-parser: 1.19.0
+      co: 4.6.0
+      ember-cli-babel: 7.19.0
+      ember-cli-version-checker: 3.1.3
+      extend: 3.0.2
+      fs-extra: 8.1.0
+      istanbul-api: 2.1.7
+      lodash.concat: 4.5.0
+      node-dir: 0.1.17
+      rsvp: 4.8.5
+      walk-sync: 2.1.0
+    dev: true
+    engines:
+      node: 8.* || >= 10.*
+    name: ember-cli-code-coverage
+    resolution:
+      tarball: 'https://codeload.github.com/kategengler/ember-cli-code-coverage/tar.gz/3fc251f937bc2a9ceb4d830be4455110100f4969'
+    version: 1.0.0-beta.9
 specifiers:
   '@ember/optional-features': ^1.3.0
   '@glimmer/component': ^1.0.0
@@ -10396,6 +10608,7 @@ specifiers:
   ember-auto-import: ^1.5.3
   ember-cli: ~3.17.0
   ember-cli-babel: ^7.18.0
+  ember-cli-code-coverage: 'github:kategengler/ember-cli-code-coverage#v1.0.0-beta.9'
   ember-cli-dependency-checker: ^3.2.0
   ember-cli-htmlbars: ^4.2.3
   ember-cli-inject-live-reload: ^2.0.2
