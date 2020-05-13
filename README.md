@@ -37,6 +37,9 @@ Usage
 {{ voca-decapitalize "Hello World"}}
 \\ => hello world
 ```
+
+View the complete documentation [here](https://rajasegar.github.io/ember-voca)
+
 Contributing
 ------------------------------------------------------------------------------
 

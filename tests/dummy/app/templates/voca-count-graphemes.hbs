@@ -1,13 +1,36 @@
+<h3>voca-count-graphemes:</h3>
+<p>Counts the graphemes in subject taking care 
+of <a href="https://rainsoft.io/what-every-javascript-developer-should-know-about-unicode/#24surrogatepairs">surrogate pairs</a> 
+and <a href="https://rainsoft.io/what-every-javascript-developer-should-know-about-unicode/#25combiningmarks">combining marks</a>.</p>
+<p>
+<code>
+  \{{ voca-count-graphemes "cafe\u0301"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-count-graphemes "cafe\u0301"}}
+</code>
+</p>
 
-  <h3>voca-count-graphemes:</h3>
-  <p>Description for voca-count-graphemes goes here.</p>
-  <p>
-  <code>
-  \{{ voca-count-graphemes "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-count-graphemes "hello world"}}
-  </code>
-  </p>
+<p>
+<code>
+  \{{ voca-count-graphemes "\uD835\uDC00\uD835\uDC01"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-count-graphemes "\uD835\uDC00\uD835\uDC01"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-count-graphemes "rain"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-count-graphemes "rain"}}
+</code>
+</p>
+

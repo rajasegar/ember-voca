@@ -1,6 +1,6 @@
-import { helper } from '@ember/component/helper';
-import { capitalize } from 'voca';
+import { helper } from "@ember/component/helper";
+import { capitalize } from "voca";
 
-export default helper(function vocaCapitalize(params/*, hash */ ) {
-  return capitalize(params[0]);
+export default helper(function vocaCapitalize(params /*, hash */) {
+  return capitalize(params[0], params[1]);
 });

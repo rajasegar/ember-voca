@@ -1,13 +1,34 @@
-
   <h3>voca-prune:</h3>
-  <p>Description for voca-prune goes here.</p>
+  <p>Truncates the arugment to a new length and does not break the words.
+  Guarantees that the truncated string is no longer than length.</p>
+  <p>The string to be added at the end [optional]</p>
   <p>
   <code>
-  \{{ voca-prune "hello world"}}
+  \{{ voca-prune "Once upon a time" 7}}
   </code>
   </p>
   <p>
   <code>
-  // => {{ voca-prune "hello world"}}
+    // => {{ voca-prune "Once upon a time" 7}}
+  </code>
+  </p>
+  <p>
+  <code>
+  \{{ voca-prune "Good day, Little Red Riding Hood" 16 " (more)"}}
+  </code>
+  </p>
+  <p>
+  <code>
+    // => {{ voca-prune "Good day, Little Red Riding Hood" 16 " (more)"}}
+  </code>
+  </p>
+  <p>
+  <code>
+  \{{ voca-prune "Once upon" 10}}
+  </code>
+  </p>
+  <p>
+  <code>
+    // => {{ voca-prune "Once upon" 10}}
   </code>
   </p>
