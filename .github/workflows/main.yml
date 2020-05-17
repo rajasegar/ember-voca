@@ -29,6 +29,14 @@ jobs:
     steps:
 
     - uses: actions/checkout@v1
+    - name: Pnpm setup
+      uses: pnpm/action-setup@v1.2.0
+      with:
+        version: 4.11.1
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+
     - name: pnpm run install, run coveralls
       env:
         COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
@@ -52,6 +60,14 @@ jobs:
         - "ember-beta"
     steps:
     - uses: actions/checkout@v1
+    - name: Pnpm setup
+      uses: pnpm/action-setup@v1.2.0
+      with:
+        version: 4.11.1
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+
     - name: Test with ${{ matrix.scenario }}
       run: pnpm run test:ember-compatibility ${{ matrix.scenario }}
 
