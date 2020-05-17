@@ -1,13 +1,33 @@
-
-  <h3>voca-slice:</h3>
-  <p>Description for voca-slice goes here.</p>
-  <p>
+<h3>voca-slice:</h3>
+<hr>
+<p>Extracts from subject a string from start position up to end position. The character at end position is not included.</p>
+<p>
   <code>
-  \{{ voca-slice "hello world"}}
+  \{{ voca-slice "miami" start=1}}
   </code>
-  </p>
-  <p>
+</p>
+<p>
   <code>
-  // => {{ voca-slice "hello world"}}
+  // => {{ voca-slice "miami" start=1}}
   </code>
-  </p>
+</p>
+<p>
+  <code>
+  \{{ voca-slice "florida" start=-4}}
+  </code>
+</p>
+<p>
+  <code>
+  // => {{ voca-slice "florida" start=-4}}
+  </code>
+</p>
+<p>
+  <code>
+  \{{ voca-slice "florida" start=1 end=4}}
+  </code>
+</p>
+<p>
+  <code>
+  // => {{ voca-slice "florida" start=1 end=4}}
+  </code>
+</p>
