@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/rajasegar/ember-voca/compare/v1.0.1...v1.0.2) (2020-05-17)
+
+
+### Bug Fixes
+
+* **ci:** fix release setup for typo ([e70a5c8](https://github.com/rajasegar/ember-voca/commit/e70a5c83def453cf21f89cfa4259d94ca3a4533e))
+* update params for last-index-of helper ([075719e](https://github.com/rajasegar/ember-voca/commit/075719e235fbc767d4ba5c88b1dcf5c3b727af45))
+
 ## [1.0.1](https://github.com/rajasegar/ember-voca/compare/v1.0.0...v1.0.1) (2020-05-17)
 
 
