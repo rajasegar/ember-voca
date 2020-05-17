@@ -12,6 +12,6 @@ module('Integration | Helper | voca-count-substrings', function(hooks) {
 
     await render(hbs`{{voca-count-substrings inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '0');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-graphemes', function(hooks) {
 
     await render(hbs`{{voca-graphemes inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '1,2,3,4');
   });
 });

@@ -1,23 +1,91 @@
-name: Build
+name: Build and Deploy
 on:
-  - pull_request
-
+  push:
+    branches:
+      - master
 jobs:
-  lint_and_test:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - uses: actions/checkout@v1
+    - name: Pnpm setup
+      uses: pnpm/action-setup@v1.2.0
+      with:
+        version: 4.11.1
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+    - name: ESLint
+      run: pnpm run lint:js
+    - name: Templates
+      run: pnpm run lint:hbs
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+
+    - uses: actions/checkout@v1
+    - name: pnpm run install, run coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
+      run: |
+        pnpm run test:ember
+        pnpm run coveralls
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  tests_ember_compat:
+    name: Ember Compatability
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    strategy:
+      matrix:
+        scenario:
+        - "ember-lts-3.16"
+        - "ember-release"
+        - "ember-beta"
+    steps:
+    - uses: actions/checkout@v1
+    - name: Test with ${{ matrix.scenario }}
+      run: pnpm run test:ember-compatibility ${{ matrix.scenario }}
+
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - uses: pnpm/action-setup@v1.2.0
-        with:
-          version: 4.11.1
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
-      - run: pnpm run lint:js
-      - run: pnpm run lint:hbs
-      - run: pnpm test
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Pnpm setup
+      uses: pnpm/action-setup@v1.2.0
+      with:
+        version: 4.11.1
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+    - name: Build
+      run: |
+        pnpm run build
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: pnpm run semantic-release
+

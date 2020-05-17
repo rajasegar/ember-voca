@@ -12,6 +12,6 @@ module('Integration | Helper | voca-is-lower-case', function(hooks) {
 
     await render(hbs`{{voca-is-lower-case inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'false');
   });
 });

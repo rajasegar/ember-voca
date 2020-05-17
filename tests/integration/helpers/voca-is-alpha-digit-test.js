@@ -12,6 +12,6 @@ module('Integration | Helper | voca-is-alpha-digit', function(hooks) {
 
     await render(hbs`{{voca-is-alpha-digit inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'true');
   });
 });

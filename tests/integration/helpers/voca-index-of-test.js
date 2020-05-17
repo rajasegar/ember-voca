@@ -12,6 +12,6 @@ module('Integration | Helper | voca-index-of', function(hooks) {
 
     await render(hbs`{{voca-index-of inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '-1');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-is-numeric', function(hooks) {
 
     await render(hbs`{{voca-is-numeric inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'true');
   });
 });

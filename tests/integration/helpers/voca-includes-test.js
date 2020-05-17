@@ -12,6 +12,6 @@ module('Integration | Helper | voca-includes', function(hooks) {
 
     await render(hbs`{{voca-includes inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'false');
   });
 });

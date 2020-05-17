@@ -12,6 +12,6 @@ module('Integration | Helper | voca-is-string', function(hooks) {
 
     await render(hbs`{{voca-is-string inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'true');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-char-at', function(hooks) {
 
     await render(hbs`{{voca-char-at inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '1');
   });
 });

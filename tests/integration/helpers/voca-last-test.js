@@ -12,6 +12,6 @@ module('Integration | Helper | voca-last', function(hooks) {
 
     await render(hbs`{{voca-last inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '4');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-reverse-grapheme', function(hooks) {
 
     await render(hbs`{{voca-reverse-grapheme inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '4321');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-replace-all', function(hooks) {
 
     await render(hbs`{{voca-replace-all inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'undefined1undefined2undefined3undefined4undefined');
   });
 });

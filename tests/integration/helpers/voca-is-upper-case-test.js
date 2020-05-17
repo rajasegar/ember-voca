@@ -12,6 +12,6 @@ module('Integration | Helper | voca-is-upper-case', function(hooks) {
 
     await render(hbs`{{voca-is-upper-case inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'false');
   });
 });

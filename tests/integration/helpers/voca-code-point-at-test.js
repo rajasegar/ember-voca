@@ -12,6 +12,6 @@ module('Integration | Helper | voca-code-point-at', function(hooks) {
 
     await render(hbs`{{voca-code-point-at inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '49');
   });
 });

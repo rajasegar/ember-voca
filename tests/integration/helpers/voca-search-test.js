@@ -12,6 +12,6 @@ module('Integration | Helper | voca-search', function(hooks) {
 
     await render(hbs`{{voca-search inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '0');
   });
 });

@@ -12,6 +12,6 @@ module('Integration | Helper | voca-first', function(hooks) {
 
     await render(hbs`{{voca-first inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '1');
   });
 });
