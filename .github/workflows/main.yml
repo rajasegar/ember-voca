@@ -66,7 +66,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Volta setup
-      uses: rwjblue/volta-setup@v1
+      uses: rwjblue/setup-volta@v1
     - name: Build
       run: |
         yarn
