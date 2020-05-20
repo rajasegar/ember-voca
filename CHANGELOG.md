@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/rajasegar/ember-voca/compare/v1.0.2...v1.0.3) (2020-05-20)
+
+
+### Bug Fixes
+
+* update params for count-where, truncate, count-substrings ([bd355c9](https://github.com/rajasegar/ember-voca/commit/bd355c9de8c1347a3af9e7a785a93c757d7fcfee))
+
 ## [1.0.2](https://github.com/rajasegar/ember-voca/compare/v1.0.1...v1.0.2) (2020-05-17)
 
 
