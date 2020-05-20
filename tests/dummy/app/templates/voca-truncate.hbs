@@ -1,13 +1,33 @@
-
-  <h3>voca-truncate:</h3>
-  <p>Description for voca-truncate goes here.</p>
-  <p>
+<h3>voca-truncate:</h3>
+<hr>
+<p>Truncates subject to a new length.</p>
+<p>
   <code>
-  \{{ voca-truncate "hello world"}}
+  \{{ voca-truncate "Once upon a time" 7}}
   </code>
-  </p>
-  <p>
+</p>
+<p>
   <code>
-  // => {{ voca-truncate "hello world"}}
+  // => {{ voca-truncate "Once upon a time" 7}}
   </code>
-  </p>
+</p>
+<p>
+  <code>
+  \{{ voca-truncate "Good day, Little Red Riding Hood" 14 "(...)"}}
+  </code>
+</p>
+<p>
+  <code>
+  // => {{ voca-truncate "Good day, Little Red Riding Hood" 14 "(...)"}}
+  </code>
+</p>
+<p>
+  <code>
+  \{{ voca-truncate "Once upon" 10}}
+  </code>
+</p>
+<p>
+  <code>
+  // => {{ voca-truncate "Once upon" 10}}
+  </code>
+</p>
