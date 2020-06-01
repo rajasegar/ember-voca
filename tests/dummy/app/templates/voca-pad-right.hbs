@@ -1,13 +1,32 @@
-
-  <h3>voca-pad-right:</h3>
-  <p>Description for voca-pad-right goes here.</p>
-  <p>
-  <code>
-  \{{ voca-pad-right "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-pad-right "hello world"}}
-  </code>
-  </p>
+<h3>voca-pad-right:</h3>
+<p>Pads subject from right to a new length.</p>
+<p>
+<code>
+  \{{ voca-pad-right "dog" 5}}
+</code>
+</p>
+<p>
+<code>
+  // => '{{ voca-pad-right "dog" 5}}'
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-pad-right "bird" 6 "-"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-pad-right "bird" 6 "-"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-pad-right "cat" 6 "-="}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-pad-right "cat" 6 "-="}}
+</code>
+</p>

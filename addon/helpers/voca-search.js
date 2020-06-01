@@ -1,6 +1,6 @@
-import { helper } from '@ember/component/helper';
-import { search } from 'voca';
+import { helper } from "@ember/component/helper";
+import { search } from "voca";
 
-export default helper(function vocaSearch(params/*, hash */ ) {
-  return search(params[0]);
+export default helper(function vocaSearch(params /*, hash */) {
+  return search(params[0], params[1]);
 });

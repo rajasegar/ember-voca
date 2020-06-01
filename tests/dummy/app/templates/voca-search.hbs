@@ -1,13 +1,22 @@
-
-  <h3>voca-search:</h3>
-  <p>Description for voca-search goes here.</p>
-  <p>
-  <code>
-  \{{ voca-search "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-search "hello world"}}
-  </code>
-  </p>
+<h3>voca-search:</h3>
+<p>Returns the first match index or -1 if not found</p>
+<p>
+<code>
+  \{{ voca-search "morning" "rn" }}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-search "morning" "rn" }}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-search "evening" "d" }}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-search "evening" "d" }}
+</code>
+</p>

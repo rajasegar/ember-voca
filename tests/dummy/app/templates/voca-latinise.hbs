@@ -1,13 +1,32 @@
-
-  <h3>voca-latinise:</h3>
-  <p>Description for voca-latinise goes here.</p>
-  <p>
-  <code>
-  \{{ voca-latinise "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-latinise "hello world"}}
-  </code>
-  </p>
+<h3>voca-latinise:</h3>
+<p>Latinises the subject by removing diacritic characters.</p>
+<p>
+<code>
+  \{{ voca-latinise "cafe\u0301"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-latinise "cafe\u0301"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-latinise "août décembre"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-latinise "août décembre"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-latinise "как прекрасен этот мир"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-latinise "как прекрасен этот мир"}}
+</code>
+</p>

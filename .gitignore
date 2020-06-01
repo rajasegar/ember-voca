@@ -25,3 +25,4 @@
 /package.json.ember-try
 
 .DS_Store
+pnpm-debug.log

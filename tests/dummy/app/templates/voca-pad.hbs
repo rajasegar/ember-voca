@@ -1,13 +1,32 @@
-
-  <h3>voca-pad:</h3>
-  <p>Description for voca-pad goes here.</p>
-  <p>
-  <code>
-  \{{ voca-pad "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-pad "hello world"}}
-  </code>
-  </p>
+<h3>voca-pad:</h3>
+<p>Pads subject to a new length</p>
+<p>
+<code>
+  \{{ voca-pad "dog" 5}}
+</code>
+</p>
+<p>
+<code>
+  // => '{{ voca-pad "dog" 5}}'
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-pad "bird" 6 "-"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-pad "bird" 6 "-"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-pad "cat" 6 "-="}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-pad "cat" 6 "-="}}
+</code>
+</p>
