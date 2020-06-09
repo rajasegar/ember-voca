@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/rajasegar/ember-voca/compare/v1.0.4...v1.0.5) (2020-06-09)
+
+
+### Bug Fixes
+
+* voca-ends with to add end parameter ([8182f5f](https://github.com/rajasegar/ember-voca/commit/8182f5f76b12760569782e83d0291035758f095c))
+
 ## [1.0.4](https://github.com/rajasegar/ember-voca/compare/v1.0.3...v1.0.4) (2020-06-01)
 
 
