@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/rajasegar/ember-voca/compare/v1.0.3...v1.0.4) (2020-06-01)
+
+
+### Bug Fixes
+
+* add params for insert, pad, pad-left, pad-right ([b29ad4e](https://github.com/rajasegar/ember-voca/commit/b29ad4edb3bf35587bc8a3aeeb9ee339ebfe0111))
+
 ## [1.0.3](https://github.com/rajasegar/ember-voca/compare/v1.0.2...v1.0.3) (2020-05-20)
 
 
