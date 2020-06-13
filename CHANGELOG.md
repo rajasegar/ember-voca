@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/rajasegar/ember-voca/compare/v1.0.5...v1.0.6) (2020-06-13)
+
+
+### Bug Fixes
+
+* add helpers for ends with and includes helpers ([3ef66f5](https://github.com/rajasegar/ember-voca/commit/3ef66f5bb6b7b44873970c15160c75efec05822c))
+
 ## [1.0.5](https://github.com/rajasegar/ember-voca/compare/v1.0.4...v1.0.5) (2020-06-09)
 
 
