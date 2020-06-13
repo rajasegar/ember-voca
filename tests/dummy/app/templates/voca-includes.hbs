@@ -1,13 +1,22 @@
-
-  <h3>voca-includes:</h3>
-  <p>Description for voca-includes goes here.</p>
-  <p>
-  <code>
-  \{{ voca-includes "hello world"}}
-  </code>
-  </p>
-  <p>
-  <code>
-  // => {{ voca-includes "hello world"}}
-  </code>
-  </p>
+<h3>voca-includes:</h3>
+<p>Checks whether subject includes search starting from position.</p>
+<p>
+<code>
+  \{{ voca-includes "starship" "star"}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-includes "starship" "star"}}
+</code>
+</p>
+<p>
+<code>
+  \{{ voca-includes "galaxy" "g" 1}}
+</code>
+</p>
+<p>
+<code>
+  // => {{ voca-includes "galaxy" "g" 1}}
+</code>
+</p>

@@ -1,6 +1,6 @@
-import { helper } from '@ember/component/helper';
-import { endsWith } from 'voca';
+import { helper } from "@ember/component/helper";
+import { endsWith } from "voca";
 
-export default helper(function vocaEndsWith(params/*, hash */ ) {
-  return endsWith(params[0], params[1]);
+export default helper(function vocaEndsWith(params /*, hash */) {
+  return endsWith(params[0], params[1], params[2]);
 });
