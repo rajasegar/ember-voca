@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/rajasegar/ember-voca/compare/v1.0.6...v1.0.7) (2020-07-11)
+
+
+### Bug Fixes
+
+* **dep:** update package.json description and keywords ([a9298cb](https://github.com/rajasegar/ember-voca/commit/a9298cb647fe1dac56b253013fc03dbd08a0a0bd))
+
 ## [1.0.6](https://github.com/rajasegar/ember-voca/compare/v1.0.5...v1.0.6) (2020-06-13)
 
 
